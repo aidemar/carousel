@@ -34,16 +34,16 @@ var changeColorButton = function (target) {
     $newButton.addClass("active");
 };
 
-var previous = function () {
-  
-  var target = target - 1;
-  var target = (target < 0) ? 4 : target;
+var previous = function (e) {
+  e.preventDefault();
+  target = target - 1;
+  target = (target < 0) ? 4 : target;
   mostrarImagen(target);
 }; 
 
 var next = function (e) {
   e.preventDefault();
-  var target = target + 1;
-  var target = (target > 4) ? 0 : target;
+  target = target + 1;
+  target = (target > 4) ? 0 : target;
   mostrarImagen(target);
 };
